@@ -186,16 +186,14 @@ header {
 }
 
 .service-container {
-  position: relative;
-  width: 1000px;
+  display: grid;
+  grid-template-rows: 250px 250px;
+  grid-template-columns: 2fr 2fr;
 }
 
 .service-container-item-a {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 500px;
-  height: 333px;
+  grid-column: 1/2;
+  grid-row: 1/3;
   background: #ff1493;
   color: white;
   text-align: center;
@@ -212,27 +210,21 @@ header {
 }
 
 .service-container-item-a img {
-  width: 30%;
-  margin: 8px;
+  width: 45%;
+  margin-top: 40px;
 }
 
 .service-container-item-b {
-  position: absolute;
-  top: 50px;
-  right: 150px;
-  width: 250px;
-  height: 166.6px;
+  grid-column: 2/3;
+  grid-row: 1/2;
   background: #ff69b4;
   color: white;
   padding-right: 50px;
 }
 
 .service-container-item-c {
-  position: absolute;
-  top: 217px;
-  right: 150px;
-  width: 250px;
-  height: 166.6px;
+  grid-column: 2/3;
+  grid-row: 2/3;
   background: #db7093;
   color: white;
   padding-right: 50px;
@@ -240,22 +232,26 @@ header {
 
 .service-container-item-b img,
 .service-container-item-c img {
-  width: 25%;
+  width: 40%;
   float: left;
-  margin-right: 5px;
+  margin-right: 15px;
   margin-top: 5px;
 }
 
 .service-text {
-  float: right;
+  float: left;
   line-height: 30px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .service-container-item-b h3,
 .service-container-item-c h3 {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+
+
 
 .blog {
   margin-top: 500px;
@@ -396,26 +392,34 @@ table th {
 
 
 .anything {
-  margin-top: 80px;
+  margin: 90px 0;
 
 }
 
 .information {
-  display: flex;
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: 2fr 2fr;
+
 }
 
 .recruit {
+  grid-column: 1/2;
+  grid-row: 1/2;
   position: relative;
 } 
 .interview {
+  grid-column: 2/3;
+  grid-row: 1/2;
   position: relative;
 }
 
 .recruit p, .interview p {
   position: absolute;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  letter-spacing: 1px;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
@@ -423,6 +427,72 @@ table th {
   transform: translate(-50%,-50%);
   margin:0;
   padding:0;
+}
+
+.recruit img, .interview img {
+  width: 100%;
+}
+
+.last-ttl {
+  color: #696969;
+  text-align: center;
+  font-weight: bold;
+}
+
+.last {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  position: relative;
+  height: 200px;
+}
+
+.bou {
+  border-left: 2px solid #c71585;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
+}
+
+.last__btn {
+  position: relative;
+  background: linear-gradient(90deg, #ff2b95,  #d5006a);
+  width: 200px;
+  display: block;
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  border-bottom: 10px solid #d5006a;
+  margin: 150px auto;
+}
+
+.last__btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  background: url(../img/mailicon.svg) no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  transform: translate(0, -50%);
+}
+
+footer {
+  width: 100%;
+  background-color: #C0C0C0;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
 
 
