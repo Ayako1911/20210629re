@@ -1,6 +1,12 @@
-body {
-  padding: 0;
-  margin: 0;
+.container {
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -9,55 +15,49 @@ body {
 }
 
 .header-nav-list {
-  float: right;
+  display: flex;
+  justify-content: space-between;
   color: grey;
 }
 
 .header-nav-list li {
-  float: left;
   margin-right: 50px;
   margin-top: 30px;
+  font-weight: bold;
 }
 
-.main-relative {
-  position: relative;
-}
-
-.main-relative-img {
-  margin:0 0 0 auto;
-  display: block;
-  width: 70%;
+.top {
+  background-image: url(../img/firstview.jpg);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: right;
+  padding: 50px 0 200px 0;
+  margin: 30px 0;
 }
 
 .main-absolute {
-  position: absolute;
-  top: 20%;
-  left: 8%;
   font-size: 60px;
   line-height: -30px;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   color: #c71585;
+  margin: 50px 0 60px 80px;
 }
 
 .main-absolute_a {
-  position: absolute;
-  top: 45%;
-  left: 8%;
   font-size: 30px;
   font-weight: bold;
   color: #c71585;
+  margin: 40px 0 15px 80px;
 }
 
 .emphasis {
-  color:#00bfff;
+  color: #00bfff;
 }
 
 .main-absolute_b {
-  position: absolute;
-  top: 51%;
-  left: 8%;
   color: gray;
   font-size: 14px;
+  margin: 0 0 15px 80px;
 }
 
 .news {
@@ -66,10 +66,11 @@ body {
 }
 
 .kodashi {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   color: #c71585;
   font: size 14px;
   margin-left: 30px;
+  margin-bottom: 10px;
 }
 
 .inner {
@@ -87,18 +88,18 @@ body {
 }
 
 .news_list {
- list-style: none;
+  list-style: none;
 }
 
 .news_list_item {
   padding: 25px 0;
-  border-top: 1px solid #E6E6E6;
+  border-top: 1px solid #e6e6e6;
 }
 .news_list_item a {
- position: relative;
- display: flex;
- text-decoration: none;
- color: gray;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: gray;
 }
 
 .news_list_date {
@@ -113,26 +114,26 @@ body {
   width: 8em;
   padding: 10px;
   text-align: center;
-  margin-left: 20px;
+  margin-left: 56px;
   color: #fff;
   font-weight: bold;
 }
 
 .about {
   background: #dcdcdc;
-  width: 1500px;
-  height: 500px;
-
+  height: 450px;
+  margin-bottom: 100px;
 }
 
-.about-sub ,.about-sub-ttl {
+.about-sub,
+.about-sub-ttl {
   text-align: center;
-  margin:auto 0;
+  margin: auto 0;
   padding-bottom: 5px;
 }
 
 .about-sub {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   color: #c71585;
   padding-top: 30px;
   font-size: 14px;
@@ -146,32 +147,35 @@ body {
 
 .about-main {
   float: left;
-  margin-left: 250px;
-  margin-top: 20px;
   color: #696969;
   line-height: -5px;
   font-size: 16px;
+  margin-left: 50px;
+  margin-right: 25px;
 }
 
 .about-img img {
   object-fit: cover;
   width: 600px;
   height: 300px;
-  float:right;
-  margin-right: 100px;
+  float: right;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
-.survice {
-  padding: 500px 0;
+.service {
+  padding-top: 100px 0;
   background: white;
+  margin-bottom: 50px;
 }
 
 .service-sub {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   color: #c71585;
   padding-top: 30px;
   font-size: 14px;
   margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 .service-sub-ttl {
@@ -187,17 +191,29 @@ body {
 }
 
 .service-container-item-a {
-  position:absolute;
+  position: absolute;
   top: 50px;
   left: 50px;
   width: 500px;
+  height: 333px;
   background: #ff1493;
   color: white;
   text-align: center;
+  margin: 0 auto;
+}
+
+.service-container-item-a h3 {
+  margin: 20px;
+}
+
+.service-text_a {
+  text-align: center;
+  margin: 30px;
 }
 
 .service-container-item-a img {
-  width: 50%;
+  width: 30%;
+  margin: 8px;
 }
 
 .service-container-item-b {
@@ -222,15 +238,23 @@ body {
   padding-right: 50px;
 }
 
-.service-container-item-b img, .service-container-item-c img {
+.service-container-item-b img,
+.service-container-item-c img {
   width: 25%;
   float: left;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 .service-text {
-  float:right;
+  float: right;
   line-height: 30px;
   font-size: 10px;
+}
+
+.service-container-item-b h3,
+.service-container-item-c h3 {
+  padding-top: 30px;
 }
 
 .blog {
@@ -247,7 +271,7 @@ body {
 
 .card {
   width: 30%;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   background: white;
   position: relative;
@@ -270,6 +294,8 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .card__content-cat {
@@ -306,6 +332,7 @@ body {
   padding-top: 30px;
   font-size: 14px;
   margin-left: 50px;
+  margin-bottom: 10px;
 }
 
 .blog-sub-ttl {
@@ -327,16 +354,21 @@ body {
   display:block;
 }
 
+.card__contant {
+  height: 110px;
+}
+
 .company-sub {
   font-family: 'Indie Flower', cursive;
   color: #c71585;
   padding-top: 30px;
   font-size: 14px;
   margin-left: 170px;
+  margin-bottom: 10px;
 }
 
 .company {
-  margin-bottom: 50px;
+  margin: 50px;
 }
 
 .company-ttl {
@@ -362,13 +394,20 @@ table th {
   background-color: #dedede;
 }
 
-.information {
-  display: flex;
-  text-align: center;
-  margin-left: 70px;
+
+.anything {
+  margin-top: 80px;
+
 }
 
-.recruit, .interview {
+.information {
+  display: flex;
+}
+
+.recruit {
+  position: relative;
+} 
+.interview {
   position: relative;
 }
 
@@ -386,67 +425,11 @@ table th {
   padding:0;
 }
 
-.recruit img, .interview img {
-  width: 100%;
-}
 
-.last-ttl {
-  color: #696969;
-  text-align: center;
-  font-weight: bold;
-}
 
-.last {
-  margin-top: 50px;
-  margin-bottom: 80px;
-  position: relative;
-}
 
-.bou {
-  border-left: 2px solid #c71585;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
-}
 
-.last__btn {
-  position: relative;
-  background: linear-gradient(90deg, #ff2b95,  #d5006a);
-  width: 200px;
-  display: block;
-  padding: 18px;
-  text-align: center;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  margin: 100px auto;
-  border-bottom: 10px solid #d5006a;
-}
 
-.last__btn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  background: url(../img/mailicon.svg) no-repeat;
-  background-size: cover;
-  width: 30px;
-  height: 30px;
-  transform: translate(0, -50%);
-}
 
-footer {
-  width: 100%;
-  background-color: #C0C0C0;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
+
+
