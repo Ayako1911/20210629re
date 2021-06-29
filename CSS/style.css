@@ -61,7 +61,7 @@ header {
 }
 
 .news {
-  padding: 300px 0;
+  margin: 300px 100px;
   background: white;
 }
 
@@ -123,12 +123,12 @@ header {
   background: #dcdcdc;
   height: 450px;
   margin-bottom: 100px;
+  margin:0 auto;
 }
 
 .about-sub,
 .about-sub-ttl {
   text-align: center;
-  margin: auto 0;
   padding-bottom: 5px;
 }
 
@@ -145,23 +145,31 @@ header {
   margin-bottom: 20px;
 }
 
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 300px;
+  max-width: 1170;
+  margin: 0 100px;
+}
+
 .about-main {
-  float: left;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  overflow: hidden;
   color: #696969;
-  line-height: -5px;
   font-size: 16px;
-  margin-left: 50px;
-  margin-right: 25px;
+  margin: 0 auto;
 }
 
 .about-img img {
+  grid-column: 2/3;
+  grid-row: 1/2;
   object-fit: cover;
-  width: 600px;
-  height: 300px;
-  float: right;
-  margin-right: 50px;
-  margin-left: 50px;
+  width: 50%;
+  padding-left: 30px;
 }
+
 
 .service {
   padding-top: 100px 0;
